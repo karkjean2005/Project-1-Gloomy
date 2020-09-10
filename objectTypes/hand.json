@@ -1,0 +1,90 @@
+{
+	"name": "hand",
+	"plugin-id": "Sprite",
+	"sid": 893314507575558,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Release",
+			"type": "boolean",
+			"desc": "",
+			"sid": 535699816074362
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3742666,
+						"useCollisionPoly": true,
+						"duration": 0
+					}
+				],
+				"sid": 152947410287401,
+				"name": "handWithFood",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8573666,
+						"useCollisionPoly": true,
+						"duration": 0
+					}
+				],
+				"sid": 329415808122068,
+				"name": "handNoFood",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5927659,
+						"useCollisionPoly": true,
+						"duration": 0
+					}
+				],
+				"sid": 798849839598477,
+				"name": "handOpen",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

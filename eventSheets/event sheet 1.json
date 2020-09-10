@@ -1,0 +1,394 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "foodOnScreenAmount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 432750423282044
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 467508034302056
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "bunnyHitBox",
+					"sid": 410929582946650,
+					"parameters": {
+						"x": "bunny.X",
+						"y": "bunny.Y"
+					}
+				}
+			],
+			"sid": 381822202448780
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "food",
+					"sid": 999829106906791,
+					"parameters": {
+						"instance-variable": "Move"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "food",
+					"sid": 552768763738622,
+					"parameters": {
+						"x": "food.X-4"
+					}
+				}
+			],
+			"sid": 920616011485697
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "food",
+					"sid": 163911503979644,
+					"parameters": {
+						"object": "bunnyHitBox"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "food",
+					"sid": 228911831607797,
+					"parameters": {
+						"instance-variable": "Shrink",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "food",
+					"sid": 164571443908423,
+					"parameters": {
+						"instance-variable": "Move",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 592931428237757
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "mouse-button-is-down",
+					"objectClass": "Mouse",
+					"sid": 842503840154723,
+					"parameters": {
+						"mouse-button": "left"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 998024390230840
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "hand",
+					"sid": 762298951472012,
+					"parameters": {
+						"instance-variable": "Release",
+						"value": "true"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 922030052892147,
+					"parameters": {
+						"audio-file": "BLIP2",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 458487875748756
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "hand",
+					"sid": 777118212479757,
+					"parameters": {
+						"instance-variable": "Release"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "hand",
+					"sid": 714661152581583,
+					"parameters": {
+						"object": "food",
+						"layer": "0",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "hand",
+					"sid": 669971599223793,
+					"parameters": {
+						"animation": "\"handOpen\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "hand",
+					"sid": 706654041396420,
+					"parameters": {
+						"instance-variable": "Release",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "food",
+					"sid": 365388351210813,
+					"parameters": {
+						"width": "57.552",
+						"height": "27.144"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "food",
+					"sid": 914114810997313,
+					"parameters": {
+						"instance-variable": "Move",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 624890213469740
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "food",
+					"sid": 377795545995805,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "food",
+					"sid": 117480765669805
+				}
+			],
+			"sid": 490908818467884
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 924380300196929
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 197820757613576,
+					"parameters": {
+						"variable": "foodOnScreenAmount",
+						"value": "food.Count"
+					}
+				}
+			],
+			"sid": 216616759198395
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 996257099143504,
+					"parameters": {
+						"variable": "foodOnScreenAmount",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "bunny",
+					"sid": 413495169174724,
+					"parameters": {
+						"animation": "\"MouthOpen\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 252550937435418
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 300223349949415,
+					"parameters": {
+						"variable": "foodOnScreenAmount",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "bunny",
+					"sid": 917086611480940,
+					"parameters": {
+						"animation": "\"MouthClosed\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 897422280429958
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "food",
+					"sid": 894300208252436,
+					"parameters": {
+						"instance-variable": "Shrink"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "food",
+					"sid": 253029883297446,
+					"parameters": {
+						"degrees": "10"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "food",
+					"sid": 802632543890853,
+					"parameters": {
+						"width": "food.Width-1",
+						"height": "food.Height-1"
+					}
+				},
+				{
+					"id": "move-at-angle",
+					"objectClass": "food",
+					"sid": 197912316333374,
+					"parameters": {
+						"angle": "angle(food.x, food.y, bunny.x, bunny.y)",
+						"distance": "2"
+					}
+				}
+			],
+			"sid": 710116759517750
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-width",
+					"objectClass": "food",
+					"sid": 620477727694537,
+					"parameters": {
+						"comparison": 3,
+						"width": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "food",
+					"sid": 450562920959261
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 789038596329254,
+					"parameters": {
+						"audio-file": "HICCUP",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 914273516186171
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-button-released",
+					"objectClass": "Mouse",
+					"sid": 556735330952416,
+					"parameters": {
+						"mouse-button": "left"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "hand",
+					"sid": 505091153265800,
+					"parameters": {
+						"animation": "\"handWithFood\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 465553139585428
+		}
+	],
+	"sid": 516847117888192
+}
