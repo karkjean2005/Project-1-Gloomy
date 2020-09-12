@@ -76,7 +76,8 @@
 			"Audio",
 			"Instructions",
 			"TiledBackground",
-			"HappyFace"
+			"HappyFace",
+			"HappyStudent"
 		],
 		"subfolders": []
 	},
