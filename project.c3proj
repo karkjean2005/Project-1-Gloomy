@@ -81,7 +81,8 @@
 			"RainClouds",
 			"BadVibes",
 			"Taxes",
-			"2020Bullets"
+			"2020Bullets",
+			"StudentBackground"
 		],
 		"subfolders": []
 	},
@@ -119,6 +120,21 @@
 					"name": "BLIP2.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 414782323902734
+				},
+				{
+					"name": "Comical Male Grunt In Pain 02 Sound Effect.wav",
+					"type": "audio/wav",
+					"sid": 984956951581455
+				},
+				{
+					"name": "storm-thunder.wav",
+					"type": "audio/wav",
+					"sid": 177731382294535
+				},
+				{
+					"name": "thunder2.wav",
+					"type": "audio/wav",
+					"sid": 638050817911055
 				}
 			],
 			"subfolders": []
