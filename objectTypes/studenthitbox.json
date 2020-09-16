@@ -1,22 +1,9 @@
 {
-	"name": "Taxes",
+	"name": "studentHitbox",
 	"plugin-id": "Sprite",
-	"sid": 651702123803309,
+	"sid": 948182786931494,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "taxMove",
-			"type": "boolean",
-			"desc": "",
-			"sid": 881862068749402
-		},
-		{
-			"name": "taxBgone",
-			"type": "boolean",
-			"desc": "",
-			"sid": 446703991099613
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -24,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 32,
-						"height": 32,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4460831,
+						"imageSpriteId": 1927404,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 815475616108097,
+				"sid": 537438816149587,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

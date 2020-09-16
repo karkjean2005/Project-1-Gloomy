@@ -3,7 +3,20 @@
 	"plugin-id": "Sprite",
 	"sid": 144689556588890,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "rainBgone",
+			"type": "boolean",
+			"desc": "",
+			"sid": 220870121481156
+		},
+		{
+			"name": "RainMove",
+			"type": "boolean",
+			"desc": "",
+			"sid": 834072687194714
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {

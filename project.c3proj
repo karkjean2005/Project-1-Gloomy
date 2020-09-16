@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 21002,
-	"name": "BunnyGame",
+	"name": "GloomyGame",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -61,6 +61,14 @@
 			"author": "Scirra",
 			"version": "r210.2",
 			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "zlhfpuvi5s8",
@@ -72,7 +80,7 @@
 			"Keyboard",
 			"Mouse",
 			"Touch",
-			"bunnyHitBox",
+			"studentHitbox",
 			"Audio",
 			"Instructions",
 			"TiledBackground",
@@ -82,7 +90,10 @@
 			"BadVibes",
 			"Taxes",
 			"2020Bullets",
-			"StudentBackground"
+			"StudentBackground",
+			"sadWave",
+			"2020cannon",
+			"Text"
 		],
 		"subfolders": []
 	},

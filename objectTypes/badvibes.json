@@ -3,7 +3,20 @@
 	"plugin-id": "Sprite",
 	"sid": 300829596837341,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "vibeMove",
+			"type": "boolean",
+			"desc": "",
+			"sid": 742966037483597
+		},
+		{
+			"name": "vibeBgone",
+			"type": "boolean",
+			"desc": "",
+			"sid": 836990329596357
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
