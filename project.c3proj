@@ -146,12 +146,68 @@
 					"name": "thunder2.wav",
 					"type": "audio/wav",
 					"sid": 638050817911055
+				},
+				{
+					"name": "Hero_Death_00.wav",
+					"type": "audio/wav",
+					"sid": 163083498727735
+				},
+				{
+					"name": "Hit_00.wav",
+					"type": "audio/wav",
+					"sid": 381363273870074
+				},
+				{
+					"name": "Hit_01.wav",
+					"type": "audio/wav",
+					"sid": 343226911325637
+				},
+				{
+					"name": "Hit_02.wav",
+					"type": "audio/wav",
+					"sid": 827272082748470
+				},
+				{
+					"name": "Hit_03.wav",
+					"type": "audio/wav",
+					"sid": 195871374137376
+				},
+				{
+					"name": "Shoot_00.wav",
+					"type": "audio/wav",
+					"sid": 610063594288196
+				},
+				{
+					"name": "Shoot_01.wav",
+					"type": "audio/wav",
+					"sid": 416076201989649
+				},
+				{
+					"name": "Shoot_02.wav",
+					"type": "audio/wav",
+					"sid": 443221089359386
+				},
+				{
+					"name": "Shoot_03.wav",
+					"type": "audio/wav",
+					"sid": 152839355942867
+				},
+				{
+					"name": "8 bit death sound.wav",
+					"type": "audio/wav",
+					"sid": 334979755214397
 				}
 			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Major Loss.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 479990364020087
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
