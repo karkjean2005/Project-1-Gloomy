@@ -1,0 +1,903 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Rando",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 603218533374043
+		},
+		{
+			"eventType": "variable",
+			"name": "vibeCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 477799890502903
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 467508034302056
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "studentHitbox",
+					"sid": 121653625117190,
+					"parameters": {
+						"x": "HappyStudent.X",
+						"y": "HappyStudent.Y"
+					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "HappyStudent",
+					"sid": 478207277896144
+				}
+			],
+			"sid": 381822202448780
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "RainClouds",
+					"sid": 240390204094259,
+					"parameters": {
+						"instance-variable": "RainMove"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "RainClouds",
+					"sid": 896766371083527,
+					"parameters": {
+						"x": "RainClouds.X-4"
+					}
+				}
+			],
+			"sid": 182138542194546
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Taxes",
+					"sid": 954145856965419,
+					"parameters": {
+						"instance-variable": "taxMove"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Taxes",
+					"sid": 384980678358576,
+					"parameters": {
+						"x": "Taxes.X-4"
+					}
+				}
+			],
+			"sid": 111045333607657
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BadVibes",
+					"sid": 470228584438535,
+					"parameters": {
+						"instance-variable": "vibeMove"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "BadVibes",
+					"sid": 802331131848107,
+					"parameters": {
+						"x": "BadVibes.X-4"
+					}
+				}
+			],
+			"sid": 210286491346856
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "RainClouds",
+					"sid": 950250707949242,
+					"parameters": {
+						"object": "studentHitbox"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "RainClouds",
+					"sid": 532302053758605,
+					"parameters": {
+						"instance-variable": "RainMove",
+						"value": "false"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 551913690272209,
+					"parameters": {
+						"object": "sadWave",
+						"layer": "0",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "RainClouds",
+					"sid": 765920032497151,
+					"parameters": {
+						"instance-variable": "rainBgone",
+						"value": "true"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 311535985116647,
+					"parameters": {
+						"variable": "vibeCount",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 186378029876175
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Taxes",
+					"sid": 956824253920835,
+					"parameters": {
+						"object": "studentHitbox"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Taxes",
+					"sid": 815291984161998,
+					"parameters": {
+						"instance-variable": "taxMove",
+						"value": "false"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 522874158085537,
+					"parameters": {
+						"object": "sadWave",
+						"layer": "0",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Taxes",
+					"sid": 172352912042723,
+					"parameters": {
+						"instance-variable": "taxBgone",
+						"value": "true"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 663589395843386,
+					"parameters": {
+						"variable": "vibeCount",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 476575738290158
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "BadVibes",
+					"sid": 348075834304537,
+					"parameters": {
+						"object": "studentHitbox"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "BadVibes",
+					"sid": 841163576950497,
+					"parameters": {
+						"instance-variable": "vibeMove",
+						"value": "false"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 845825894047909,
+					"parameters": {
+						"object": "sadWave",
+						"layer": "0",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "BadVibes",
+					"sid": 478914693967593,
+					"parameters": {
+						"instance-variable": "vibeBgone",
+						"value": "true"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 962438493058644,
+					"parameters": {
+						"variable": "vibeCount",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 702569333240889
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "mouse-button-is-down",
+					"objectClass": "Mouse",
+					"sid": 842503840154723,
+					"parameters": {
+						"mouse-button": "left"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 998024390230840
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 922030052892147,
+					"parameters": {
+						"audio-file": "BLIP2",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 286164014783690,
+					"parameters": {
+						"variable": "Rando",
+						"value": "round(random(1,3))"
+					}
+				}
+			],
+			"sid": 458487875748756
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 679241729963059,
+					"parameters": {
+						"variable": "Rando",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "RainClouds",
+					"sid": 186495521060909,
+					"parameters": {
+						"width": "57.552",
+						"height": "27.114"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "RainClouds",
+					"sid": 379056658044399,
+					"parameters": {
+						"instance-variable": "RainMove",
+						"value": "true"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "2020cannon",
+					"sid": 286411965481148,
+					"parameters": {
+						"object": "RainClouds",
+						"layer": "0",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 440014077754301,
+					"parameters": {
+						"variable": "Rando",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 530950782343304
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 179050879387243,
+					"parameters": {
+						"variable": "Rando",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "Taxes",
+					"sid": 612839565348253,
+					"parameters": {
+						"width": "57.552",
+						"height": "27.114"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Taxes",
+					"sid": 327249475522705,
+					"parameters": {
+						"instance-variable": "taxMove",
+						"value": "true"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "2020cannon",
+					"sid": 367775107580341,
+					"parameters": {
+						"object": "Taxes",
+						"layer": "0",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 789586672217982,
+					"parameters": {
+						"variable": "Rando",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 242056200776577
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 886868089976201,
+					"parameters": {
+						"variable": "Rando",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "BadVibes",
+					"sid": 985960898515436,
+					"parameters": {
+						"width": "57.552",
+						"height": "27.114"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "BadVibes",
+					"sid": 758242844013502,
+					"parameters": {
+						"instance-variable": "vibeMove",
+						"value": "true"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "2020cannon",
+					"sid": 176065954971583,
+					"parameters": {
+						"object": "BadVibes",
+						"layer": "0",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 345209031678018,
+					"parameters": {
+						"variable": "Rando",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 111651959676658
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BadVibes",
+					"sid": 360701787472166,
+					"parameters": {
+						"instance-variable": "vibeBgone"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BadVibes",
+					"sid": 395612346622758
+				}
+			],
+			"sid": 331583295735809
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "RainClouds",
+					"sid": 252596017419896,
+					"parameters": {
+						"instance-variable": "rainBgone"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "RainClouds",
+					"sid": 476698102073893
+				}
+			],
+			"sid": 899556936709926
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Taxes",
+					"sid": 548084076032916,
+					"parameters": {
+						"instance-variable": "taxBgone"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Taxes",
+					"sid": 265180071400855
+				}
+			],
+			"sid": 394221078594045
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "BadVibes",
+					"sid": 476366374498388,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BadVibes",
+					"sid": 855374835854418
+				}
+			],
+			"sid": 701057146447777
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "RainClouds",
+					"sid": 211731087824363,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "RainClouds",
+					"sid": 948773449634376
+				}
+			],
+			"sid": 587239656947534
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "Taxes",
+					"sid": 890208452451078,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Taxes",
+					"sid": 893677399853509
+				}
+			],
+			"sid": 552947378717165
+		},
+		{
+			"eventType": "comment",
+			"text": "VibeChecks"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 425099985363700,
+					"parameters": {
+						"variable": "vibeCount",
+						"comparison": 2,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 941546748957703,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 735191715487339
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 592426247116049,
+					"parameters": {
+						"variable": "vibeCount",
+						"comparison": 0,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 351059108079251,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 444322622712326
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 633293705148811,
+					"parameters": {
+						"variable": "vibeCount",
+						"comparison": 0,
+						"value": "10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 861809625772919,
+					"parameters": {
+						"frame-number": "2"
+					}
+				}
+			],
+			"sid": 771369389884618
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 449456071708916,
+					"parameters": {
+						"variable": "vibeCount",
+						"comparison": 0,
+						"value": "20"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 627470303186370,
+					"parameters": {
+						"frame-number": "3"
+					}
+				}
+			],
+			"sid": 504876579370826
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 560858712959135,
+					"parameters": {
+						"variable": "vibeCount",
+						"comparison": 0,
+						"value": "30"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 299746517680981,
+					"parameters": {
+						"frame-number": "4"
+					}
+				}
+			],
+			"sid": 702682022408174
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 243765203147499,
+					"parameters": {
+						"variable": "vibeCount",
+						"comparison": 0,
+						"value": "40"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 908670497195795,
+					"parameters": {
+						"frame-number": "5"
+					}
+				}
+			],
+			"sid": 450802869733499
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 642577278317654,
+					"parameters": {
+						"variable": "vibeCount",
+						"comparison": 0,
+						"value": "50"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 383009319042413,
+					"parameters": {
+						"frame-number": "6"
+					}
+				}
+			],
+			"sid": 160145730796816
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 523900699859464,
+					"parameters": {
+						"variable": "vibeCount",
+						"comparison": 0,
+						"value": "60"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 474347918801253,
+					"parameters": {
+						"frame-number": "7"
+					}
+				}
+			],
+			"sid": 258577793402921
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 955359556950033,
+					"parameters": {
+						"variable": "vibeCount",
+						"comparison": 0,
+						"value": "70"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 215337856352051,
+					"parameters": {
+						"frame-number": "8"
+					}
+				}
+			],
+			"sid": 714332402451200
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 408487186674786,
+					"parameters": {
+						"variable": "vibeCount",
+						"comparison": 0,
+						"value": "80"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 475400164326046,
+					"parameters": {
+						"frame-number": "9"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text",
+					"sid": 967902325370432,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Instructions",
+					"sid": 288120968369991,
+					"parameters": {
+						"text": "\"Give us a moment to find another one\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 322523061939230,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 594803886851341
+				}
+			],
+			"sid": 955134523553206
+		}
+	],
+	"sid": 516847117888192
+}

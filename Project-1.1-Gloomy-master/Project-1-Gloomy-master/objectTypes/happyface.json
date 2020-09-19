@@ -1,0 +1,57 @@
+{
+	"name": "HappyFace",
+	"plugin-id": "Sprite",
+	"sid": 195654700242977,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 320,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 1,
+						"imageSpriteId": 1758177,
+						"collisionPoly": {
+							"points": [
+								0.015625,
+								0.15625,
+								0.5,
+								0.375,
+								0.98125,
+								0.15625,
+								0.996875,
+								0.5,
+								0.98125,
+								0.8125,
+								0.5,
+								0.59375,
+								0.015625,
+								0.8125,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 905023126857909,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
