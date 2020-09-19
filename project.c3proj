@@ -8,14 +8,6 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
-			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -34,6 +26,14 @@
 			"type": "plugin",
 			"id": "Touch",
 			"name": "Touch",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
 			"author": "Scirra",
 			"version": "r210.2",
 			"bundled": false
@@ -74,9 +74,6 @@
 	"uniqueId": "zlhfpuvi5s8",
 	"objectTypes": {
 		"items": [
-			"bunny",
-			"hand",
-			"food",
 			"Keyboard",
 			"Mouse",
 			"Touch",
@@ -84,12 +81,10 @@
 			"Audio",
 			"Instructions",
 			"TiledBackground",
-			"HappyFace",
 			"HappyStudent",
 			"RainClouds",
 			"BadVibes",
 			"Taxes",
-			"2020Bullets",
 			"StudentBackground",
 			"sadWave",
 			"2020cannon",
