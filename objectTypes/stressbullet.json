@@ -1,22 +1,9 @@
 {
-	"name": "RainClouds",
+	"name": "StressBullet",
 	"plugin-id": "Sprite",
-	"sid": 144689556588890,
+	"sid": 377757563160731,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "rainBgone",
-			"type": "boolean",
-			"desc": "",
-			"sid": 220870121481156
-		},
-		{
-			"name": "RainMove",
-			"type": "boolean",
-			"desc": "",
-			"sid": 834072687194714
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -31,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1479727,
+						"imageSpriteId": 4182040,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 970520472327925,
+				"sid": 769165078520096,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
