@@ -9,6 +9,48 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 327435759367722
+		},
+		{
+			"name": "attackPattern1",
+			"type": "boolean",
+			"desc": "",
+			"sid": 223992337180128
+		},
+		{
+			"name": "attackPattern2",
+			"type": "boolean",
+			"desc": "",
+			"sid": 263720910896900
+		},
+		{
+			"name": "attackPattern3",
+			"type": "boolean",
+			"desc": "",
+			"sid": 622988127370286
+		},
+		{
+			"name": "attackPattern4",
+			"type": "boolean",
+			"desc": "",
+			"sid": 902398554599291
+		},
+		{
+			"name": "attackPattern5",
+			"type": "boolean",
+			"desc": "",
+			"sid": 245008870741588
+		},
+		{
+			"name": "attackPattern6",
+			"type": "boolean",
+			"desc": "",
+			"sid": 564970969762402
+		},
+		{
+			"name": "attackPatternTimer",
+			"type": "number",
+			"desc": "",
+			"sid": 641793515420462
 		}
 	],
 	"behaviorTypes": [],
@@ -20,13 +62,35 @@
 					{
 						"width": 32,
 						"height": 32,
-						"originX": 0,
-						"originY": 0.5,
+						"originX": 0.46875,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 2284933,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "left corner",
+								"x": 0,
+								"y": 1
+							},
+							{
+								"name": "right corner",
+								"x": 1,
+								"y": 1
+							},
+							{
+								"name": "left-mid",
+								"x": 0.21875,
+								"y": 1
+							},
+							{
+								"name": "right-mid",
+								"x": 0.71875,
+								"y": 1
+							}
+						],
 						"duration": 1
 					}
 				],

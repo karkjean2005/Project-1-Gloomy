@@ -13,13 +13,23 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "vibeCount",
+			"name": "attackPatternGen",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 722090379877731
+			"sid": 592581264883058
+		},
+		{
+			"eventType": "variable",
+			"name": "timer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 846193990247018
 		},
 		{
 			"eventType": "block",
@@ -44,6 +54,14 @@
 					"id": "stop-animation",
 					"objectClass": "HappyStudent",
 					"sid": 500206589322757
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 417420984511790,
+					"parameters": {
+						"text": "attackPatternGen"
+					}
 				}
 			],
 			"sid": 758361231607438
@@ -52,73 +70,26 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "RainClouds",
-					"sid": 140309920012100,
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 465381838220652,
 					"parameters": {
-						"instance-variable": "RainMove"
+						"interval-seconds": "6"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-x",
-					"objectClass": "RainClouds",
-					"sid": 786200668691885,
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 101290662195409,
 					"parameters": {
-						"x": "RainClouds.X-4"
+						"variable": "attackPatternGen",
+						"value": "round(random(1,6))"
 					}
 				}
 			],
-			"sid": 804739235196312
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Taxes",
-					"sid": 384014542848625,
-					"parameters": {
-						"instance-variable": "taxMove"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-x",
-					"objectClass": "Taxes",
-					"sid": 444068200144370,
-					"parameters": {
-						"x": "Taxes.X-4"
-					}
-				}
-			],
-			"sid": 670104147548693
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "BadVibes",
-					"sid": 466190747644126,
-					"parameters": {
-						"instance-variable": "vibeMove"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-x",
-					"objectClass": "BadVibes",
-					"sid": 634287808196996,
-					"parameters": {
-						"x": "BadVibes.X-4"
-					}
-				}
-			],
-			"sid": 792545192016162
+			"sid": 234435130920160
 		},
 		{
 			"eventType": "block",
@@ -150,24 +121,6 @@
 						"object": "sadWave",
 						"layer": "0",
 						"image-point": "0"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "RainClouds",
-					"sid": 752834317503431,
-					"parameters": {
-						"instance-variable": "rainBgone",
-						"value": "true"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 110948210818174,
-					"parameters": {
-						"variable": "vibeCount",
-						"value": "1"
 					}
 				}
 			],
@@ -204,24 +157,6 @@
 						"layer": "0",
 						"image-point": "0"
 					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Taxes",
-					"sid": 612409991586087,
-					"parameters": {
-						"instance-variable": "taxBgone",
-						"value": "true"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 703129717658927,
-					"parameters": {
-						"variable": "vibeCount",
-						"value": "1"
-					}
 				}
 			],
 			"sid": 777681720930519
@@ -257,233 +192,9 @@
 						"layer": "0",
 						"image-point": "0"
 					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "BadVibes",
-					"sid": 380082860813333,
-					"parameters": {
-						"instance-variable": "vibeBgone",
-						"value": "true"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 690757086861983,
-					"parameters": {
-						"variable": "vibeCount",
-						"value": "1"
-					}
 				}
 			],
 			"sid": 738642963479649
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "mouse-button-is-down",
-					"objectClass": "Mouse",
-					"sid": 797661859876837,
-					"parameters": {
-						"mouse-button": "left"
-					}
-				},
-				{
-					"id": "trigger-once-while-true",
-					"objectClass": "System",
-					"sid": 925173090914518
-				}
-			],
-			"actions": [
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 379683395517918,
-					"parameters": {
-						"audio-file": "storm-thunder",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 274876410561167,
-					"parameters": {
-						"variable": "Rando",
-						"value": "round(random(1,3))"
-					}
-				}
-			],
-			"sid": 602070196251786
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 601518515125264,
-					"parameters": {
-						"variable": "Rando",
-						"comparison": 0,
-						"value": "1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-size",
-					"objectClass": "RainClouds",
-					"sid": 668193000561318,
-					"parameters": {
-						"width": "57.552",
-						"height": "27.114"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "RainClouds",
-					"sid": 354232212936851,
-					"parameters": {
-						"instance-variable": "RainMove",
-						"value": "true"
-					}
-				},
-				{
-					"id": "spawn-another-object",
-					"objectClass": "2020cannon",
-					"sid": 233732669915613,
-					"parameters": {
-						"object": "RainClouds",
-						"layer": "0",
-						"image-point": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 342200144711134,
-					"parameters": {
-						"variable": "Rando",
-						"value": "0"
-					}
-				}
-			],
-			"sid": 942416001577494
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 281002003908321,
-					"parameters": {
-						"variable": "Rando",
-						"comparison": 0,
-						"value": "2"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-size",
-					"objectClass": "Taxes",
-					"sid": 881219095624425,
-					"parameters": {
-						"width": "57.552",
-						"height": "27.114"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Taxes",
-					"sid": 376488236726515,
-					"parameters": {
-						"instance-variable": "taxMove",
-						"value": "true"
-					}
-				},
-				{
-					"id": "spawn-another-object",
-					"objectClass": "2020cannon",
-					"sid": 483389404870785,
-					"parameters": {
-						"object": "Taxes",
-						"layer": "0",
-						"image-point": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 866858950818172,
-					"parameters": {
-						"variable": "Rando",
-						"value": "0"
-					}
-				}
-			],
-			"sid": 299906232255244
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 377934929411141,
-					"parameters": {
-						"variable": "Rando",
-						"comparison": 0,
-						"value": "3"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-size",
-					"objectClass": "BadVibes",
-					"sid": 946324115426531,
-					"parameters": {
-						"width": "57.552",
-						"height": "27.114"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "BadVibes",
-					"sid": 148320910627720,
-					"parameters": {
-						"instance-variable": "vibeMove",
-						"value": "true"
-					}
-				},
-				{
-					"id": "spawn-another-object",
-					"objectClass": "2020cannon",
-					"sid": 967989213316120,
-					"parameters": {
-						"object": "BadVibes",
-						"layer": "0",
-						"image-point": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 806364811052848,
-					"parameters": {
-						"variable": "Rando",
-						"value": "0"
-					}
-				}
-			],
-			"sid": 605584496834183
 		},
 		{
 			"eventType": "block",
@@ -607,7 +318,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "VibeChecks"
+			"text": "attack pattern line'"
 		},
 		{
 			"eventType": "block",
@@ -615,288 +326,1495 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 809855955439447,
+					"sid": 146505119752187,
 					"parameters": {
-						"variable": "vibeCount",
-						"comparison": 2,
+						"variable": "attackPatternGen",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "2020cannon",
+					"sid": 823533633196973,
+					"parameters": {
+						"instance-variable": "attackPattern1",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 179362037262748
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "2020cannon",
+					"sid": 280966765229373,
+					"parameters": {
+						"instance-variable": "attackPattern1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 831586457461083,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 788728204506981
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "2020cannon",
+							"sid": 932850154120465,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 634441510565257
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 386996690005891,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 642583429677838,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 891433582821057,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 543064344938295,
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 320537693997043,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 485454094012288,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 151139558771030,
+							"parameters": {
+								"text": "\"attackpattern 1\""
+							}
+						}
+					],
+					"sid": 895045051751067
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "2020cannon",
+							"sid": 898631960359259,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "2020cannon",
+							"sid": 900305083175895,
+							"parameters": {
+								"instance-variable": "attackPattern1",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "2020cannon",
+							"sid": 260700796029943,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 738881206158334
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "attack pattern shotgun"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 570062054364302,
+					"parameters": {
+						"variable": "attackPatternGen",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "2020cannon",
+					"sid": 934978677983435,
+					"parameters": {
+						"instance-variable": "attackPattern2",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 462486057392247
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "2020cannon",
+					"sid": 516121899482199,
+					"parameters": {
+						"instance-variable": "attackPattern2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 404317079274022,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 210564183563537
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "2020cannon",
+							"sid": 707839075950144,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 295667384359882
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 111623006774271,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 988738432216110,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 401530357965645,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 803285083990008,
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 744221599999743,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 357231376988730,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 584925361756735,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 670692136812836,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "70"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 821495322353326,
+							"parameters": {
+								"angle": "70"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 964319911877307,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 552134322528163,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 931284531727989,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 702083047746346,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "110"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 663931345855047,
+							"parameters": {
+								"angle": "110"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 808776311148663,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 684724114000725,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 335110384056410,
+							"parameters": {
+								"text": "\"attackpattern 2\""
+							}
+						}
+					],
+					"sid": 725821217395932
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "2020cannon",
+							"sid": 921954052852061,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "2020cannon",
+							"sid": 836691666893234,
+							"parameters": {
+								"instance-variable": "attackPattern2",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "2020cannon",
+							"sid": 469844653987155,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 267412348149605
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "attack pattern Arrow spread"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 157122603207447,
+					"parameters": {
+						"variable": "attackPatternGen",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "2020cannon",
+					"sid": 346623256204958,
+					"parameters": {
+						"instance-variable": "attackPattern3",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 534797730605100
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "2020cannon",
+					"sid": 799639413708276,
+					"parameters": {
+						"instance-variable": "attackPattern3"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 956700254796043,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 928196502602830
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "2020cannon",
+							"sid": 431247280165711,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 581716722214723
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 844873281193221,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 261915643258588,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 917475236540267,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 396744712003809,
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 936696991304954,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 927135560591907,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 595478927775732,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "3"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 496910029720257,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "70"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 177333252816833,
+							"parameters": {
+								"angle": "70"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 926190391748185,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 843301443958144,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 773089516676964,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "4"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 850973512739231,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "110"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 422542541868773,
+							"parameters": {
+								"angle": "110"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 720897002393327,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 310193389091706,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 702731322360875,
+							"parameters": {
+								"text": "\"attackpattern 3\""
+							}
+						}
+					],
+					"sid": 499056209895793
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "2020cannon",
+							"sid": 321667638182364,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "2020cannon",
+							"sid": 181140798805683,
+							"parameters": {
+								"instance-variable": "attackPattern3",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "2020cannon",
+							"sid": 732236586998907,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 438616970697241
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "attack Pattern close tri line"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 789298697256202,
+					"parameters": {
+						"variable": "attackPatternGen",
+						"comparison": 0,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "2020cannon",
+					"sid": 117471940729090,
+					"parameters": {
+						"instance-variable": "attackPattern4",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 381620258567138
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "2020cannon",
+					"sid": 565460139372716,
+					"parameters": {
+						"instance-variable": "attackPattern4"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 707282631605791,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 735760885210676
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "2020cannon",
+							"sid": 767588070070976,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 972102239234400
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 226130483180472,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 140754085513772,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 587953149894339,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 417105236768648,
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 841354715475777,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 154853892028819,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 130721330700048,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "1"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 901237906593595,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 988194715966503,
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 573945742962823,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 258182749406019,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 763368862787823,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "2"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 869990887625714,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 371167801456365,
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 799896683478384,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 668342764853191,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 755570184452737,
+							"parameters": {
+								"text": "\"attackpattern 4\""
+							}
+						}
+					],
+					"sid": 160224083206420
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "2020cannon",
+							"sid": 431435446643808,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "2020cannon",
+							"sid": 819775862629191,
+							"parameters": {
+								"instance-variable": "attackPattern4",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "2020cannon",
+							"sid": 873352034080335,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 318206761950065
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "attack Pattern wide tri line"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 575449542002526,
+					"parameters": {
+						"variable": "attackPatternGen",
+						"comparison": 0,
 						"value": "5"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-animation-frame",
-					"objectClass": "HappyStudent",
-					"sid": 251920172938925,
+					"id": "set-boolean-instvar",
+					"objectClass": "2020cannon",
+					"sid": 839118083677145,
 					"parameters": {
-						"frame-number": "0"
+						"instance-variable": "attackPattern5",
+						"value": "true"
 					}
 				}
 			],
-			"sid": 423753670423745
+			"sid": 644258904868056
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 595089346354284,
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "2020cannon",
+					"sid": 981258906447545,
 					"parameters": {
-						"variable": "vibeCount",
-						"comparison": 0,
-						"value": "5"
+						"instance-variable": "attackPattern5"
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 618638746650258,
+			"children": [
 				{
-					"id": "set-animation-frame",
-					"objectClass": "HappyStudent",
-					"sid": 971396730958828,
-					"parameters": {
-						"frame-number": "1"
-					}
-				}
-			],
-			"sid": 872005407835265
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 519252649798789,
-					"parameters": {
-						"variable": "vibeCount",
-						"comparison": 0,
-						"value": "10"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "HappyStudent",
-					"sid": 676806200549203,
-					"parameters": {
-						"frame-number": "2"
-					}
-				}
-			],
-			"sid": 325226536359317
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 458161154344549,
-					"parameters": {
-						"variable": "vibeCount",
-						"comparison": 0,
-						"value": "20"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "HappyStudent",
-					"sid": 898150945174405,
-					"parameters": {
-						"frame-number": "3"
-					}
-				}
-			],
-			"sid": 550247518764814
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 287557193441628,
-					"parameters": {
-						"variable": "vibeCount",
-						"comparison": 0,
-						"value": "30"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "HappyStudent",
-					"sid": 704317244974304,
-					"parameters": {
-						"frame-number": "4"
-					}
-				}
-			],
-			"sid": 189713408110789
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 919147216218584,
-					"parameters": {
-						"variable": "vibeCount",
-						"comparison": 0,
-						"value": "40"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "HappyStudent",
-					"sid": 729802197987061,
-					"parameters": {
-						"frame-number": "5"
-					}
-				}
-			],
-			"sid": 107775520933795
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 639295037934680,
-					"parameters": {
-						"variable": "vibeCount",
-						"comparison": 0,
-						"value": "50"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "HappyStudent",
-					"sid": 890736149439423,
-					"parameters": {
-						"frame-number": "6"
-					}
-				}
-			],
-			"sid": 356371190485906
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 478902345250227,
-					"parameters": {
-						"variable": "vibeCount",
-						"comparison": 0,
-						"value": "60"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "HappyStudent",
-					"sid": 999250206617746,
-					"parameters": {
-						"frame-number": "7"
-					}
-				}
-			],
-			"sid": 207110054725289
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 475703653534753,
-					"parameters": {
-						"variable": "vibeCount",
-						"comparison": 0,
-						"value": "70"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "HappyStudent",
-					"sid": 692044839068520,
-					"parameters": {
-						"frame-number": "8"
-					}
-				}
-			],
-			"sid": 200795251330693
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 356183606623803,
-					"parameters": {
-						"variable": "vibeCount",
-						"comparison": 0,
-						"value": "80"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation-frame",
-					"objectClass": "HappyStudent",
-					"sid": 251341120345989,
-					"parameters": {
-						"frame-number": "9"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 203904452956305
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "2020cannon",
+							"sid": 748355625290683,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 187847368469601
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "Text",
-					"sid": 815338147871781,
-					"parameters": {
-						"visibility": "visible"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 121213177150231,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 808441786305579,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 964574368495051,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 874145615055506,
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 695269888702263,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 672625629524991,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 766862927918446,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "3"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 869013455747745,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 902286591902039,
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 380678665667173,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 574982008197404,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 574483856370989,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "4"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 644779559306666,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 169263904602234,
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 412065259814832,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 265924220460810,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 791189880353807,
+							"parameters": {
+								"text": "\"attackpattern 5\""
+							}
+						}
+					],
+					"sid": 792732885420857
 				},
 				{
-					"id": "set-text",
-					"objectClass": "Instructions",
-					"sid": 865752673153303,
-					"parameters": {
-						"text": "\"Give us a moment to find another one\""
-					}
-				},
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "2020cannon",
+							"sid": 137743292322959,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "2020cannon",
+							"sid": 464932264776244,
+							"parameters": {
+								"instance-variable": "attackPattern5",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "2020cannon",
+							"sid": 382297765957807,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 382731092852449
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "attack Pattern broadhead tri line"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
 				{
-					"id": "wait",
+					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 836795160607751,
+					"sid": 810830115916799,
 					"parameters": {
-						"seconds": "5"
+						"variable": "attackPatternGen",
+						"comparison": 0,
+						"value": "6"
 					}
-				},
-				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 710128793922442
 				}
 			],
-			"sid": 528160387151531
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "2020cannon",
+					"sid": 401854150917273,
+					"parameters": {
+						"instance-variable": "attackPattern6",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 625324744539583
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "2020cannon",
+					"sid": 519100288697457,
+					"parameters": {
+						"instance-variable": "attackPattern6"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 274553616936584,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 105533599062969
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "2020cannon",
+							"sid": 351752996542100,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 561386770777816
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 789632038925049,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 473236602168048,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 425977985715939,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 981908143155774,
+							"parameters": {
+								"angle": "90"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 615187627118797,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 211850439925624,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 230434587439916,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "1"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 566460026523191,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "50"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 824050825079765,
+							"parameters": {
+								"angle": "50"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 752023837243859,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 965105894873316,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "2020cannon",
+							"sid": 239795168603192,
+							"parameters": {
+								"object": "DrugBullet",
+								"layer": "0",
+								"image-point": "2"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "DrugBullet",
+							"sid": 205201395205797,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "130"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "DrugBullet",
+							"sid": 260118467772552,
+							"parameters": {
+								"angle": "130"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "DrugBullet",
+							"sid": 715981821561012,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "DrugBullet",
+							"sid": 151732587640315,
+							"parameters": {
+								"width": "32",
+								"height": "32"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 961875490574115,
+							"parameters": {
+								"text": "\"attackpattern 6\""
+							}
+						}
+					],
+					"sid": 246138640999747
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "2020cannon",
+							"sid": 245021238405097,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "2020cannon",
+							"sid": 154862731987207,
+							"parameters": {
+								"instance-variable": "attackPattern6",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "2020cannon",
+							"sid": 614036608548331,
+							"parameters": {
+								"instance-variable": "attackPatternTimer",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 407764385877334
+				}
+			]
 		}
 	],
 	"sid": 516847117888192

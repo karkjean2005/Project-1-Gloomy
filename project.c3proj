@@ -69,6 +69,30 @@
 			"author": "Scirra",
 			"version": "r210.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "zlhfpuvi5s8",
@@ -94,7 +118,9 @@
 			"StressBullet",
 			"DrugBullet",
 			"HealthBullet",
-			"TraumaBullet"
+			"TraumaBullet",
+			"Text2",
+			"Text3"
 		],
 		"subfolders": []
 	},

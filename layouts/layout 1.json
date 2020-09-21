@@ -22,8 +22,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": -671,
-						"y": -6,
+						"x": -698,
+						"y": 90,
 						"width": 642,
 						"height": 506,
 						"originX": 0,
@@ -101,48 +101,6 @@
 					}
 				},
 				{
-					"type": "Instructions",
-					"properties": {
-						"text": "Click to hand out depression",
-						"enable-bbcode": true,
-						"font": "Comic Sans MS",
-						"size": 32,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.5058823529411764,
-							0.08627450980392157,
-							0.7333333333333333,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 4,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 118,
-						"y": 337,
-						"width": 408,
-						"height": 165,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "HappyStudent",
 					"properties": {
 						"initially-visible": true,
@@ -153,12 +111,24 @@
 					},
 					"uid": 11,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-4",
+								"set-angle": "smooth",
+								"default-controls": true,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
-						"x": 125,
-						"y": 247,
-						"width": 121.82364302548172,
-						"height": 121.82364302548172,
+						"x": 303.5,
+						"y": 429.5,
+						"width": 36.41036040628509,
+						"height": 36.41036040628509,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -185,7 +155,22 @@
 						"rainBgone": false,
 						"RainMove": false
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 809,
 						"y": 375,
@@ -217,10 +202,25 @@
 						"vibeMove": false,
 						"vibeBgone": false
 					},
-					"behaviors": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
-						"x": 940,
-						"y": 286,
+						"x": 942,
+						"y": 429,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -249,10 +249,25 @@
 						"taxMove": false,
 						"taxBgone": false
 					},
-					"behaviors": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
-						"x": 1056,
-						"y": 292,
+						"x": 820,
+						"y": 170,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -296,8 +311,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 711,
-						"y": 564,
+						"x": 715,
+						"y": 558,
 						"width": 176.4822937294277,
 						"height": 176.4822937294277,
 						"originX": 0,
@@ -323,116 +338,23 @@
 					},
 					"uid": 15,
 					"instanceVariables": {
-						"BeginFire": false
+						"BeginFire": false,
+						"attackPattern1": false,
+						"attackPattern2": false,
+						"attackPattern3": false,
+						"attackPattern4": false,
+						"attackPattern5": false,
+						"attackPattern6": false,
+						"attackPatternTimer": 0
 					},
 					"behaviors": {},
 					"world": {
-						"x": 517,
-						"y": 239,
-						"width": 77.76888838089432,
-						"height": 69.12790078301717,
-						"originX": 0,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Text",
-					"properties": {
-						"text": "Stop, stop, he's already sad",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 12,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": false,
-						"origin": "top-left"
-					},
-					"uid": 18,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 37,
-						"y": 320,
-						"width": 200,
-						"height": 30,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "2020Clouds",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 2,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 567,
-						"y": 120,
-						"width": 32,
-						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "2020Bullet",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 3,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 741,
-						"y": 170,
-						"width": 32,
-						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 314,
+						"y": 174,
+						"width": 416.0740140019981,
+						"height": 171.62134577955385,
+						"originX": 0.46875,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -454,7 +376,22 @@
 					},
 					"uid": 19,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 887,
 						"y": 133,
@@ -483,10 +420,25 @@
 					},
 					"uid": 20,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
-						"x": 978,
-						"y": 176,
+						"x": 1014,
+						"y": 354,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -512,10 +464,25 @@
 					},
 					"uid": 21,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
-						"x": 819,
-						"y": 277,
+						"x": 864,
+						"y": 397,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -541,7 +508,22 @@
 					},
 					"uid": 22,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 754,
 						"y": 68,
@@ -549,6 +531,132 @@
 						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text",
+					"properties": {
+						"text": "attack",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 2,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 244,
+						"y": 248,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text2",
+					"properties": {
+						"text": "attack",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 3,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 391,
+						"y": 247,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text3",
+					"properties": {
+						"text": "Timer",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 4,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 449,
+						"y": 350,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

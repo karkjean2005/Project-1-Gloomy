@@ -4,7 +4,13 @@
 	"sid": 747367231035874,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 952228428492141
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
