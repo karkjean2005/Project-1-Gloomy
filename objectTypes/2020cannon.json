@@ -11,6 +11,12 @@
 			"sid": 327435759367722
 		},
 		{
+			"name": "attackPatternTimer",
+			"type": "number",
+			"desc": "",
+			"sid": 641793515420462
+		},
+		{
 			"name": "attackPattern1",
 			"type": "boolean",
 			"desc": "",
@@ -47,10 +53,34 @@
 			"sid": 564970969762402
 		},
 		{
-			"name": "attackPatternTimer",
-			"type": "number",
+			"name": "attackPattern7",
+			"type": "boolean",
 			"desc": "",
-			"sid": 641793515420462
+			"sid": 704824521803248
+		},
+		{
+			"name": "attackPattern8",
+			"type": "boolean",
+			"desc": "",
+			"sid": 271962508390396
+		},
+		{
+			"name": "attackPattern9",
+			"type": "boolean",
+			"desc": "",
+			"sid": 352265682737938
+		},
+		{
+			"name": "attackPattern10",
+			"type": "boolean",
+			"desc": "",
+			"sid": 687986575336791
+		},
+		{
+			"name": "attackPattern11",
+			"type": "boolean",
+			"desc": "",
+			"sid": 953436416498883
 		}
 	],
 	"behaviorTypes": [],

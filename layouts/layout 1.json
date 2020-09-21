@@ -339,13 +339,18 @@
 					"uid": 15,
 					"instanceVariables": {
 						"BeginFire": false,
+						"attackPatternTimer": 0,
 						"attackPattern1": false,
 						"attackPattern2": false,
 						"attackPattern3": false,
 						"attackPattern4": false,
 						"attackPattern5": false,
 						"attackPattern6": false,
-						"attackPatternTimer": 0
+						"attackPattern7": false,
+						"attackPattern8": false,
+						"attackPattern9": false,
+						"attackPattern10": false,
+						"attackPattern11": false
 					},
 					"behaviors": {},
 					"world": {
