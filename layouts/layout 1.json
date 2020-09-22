@@ -110,7 +110,9 @@
 						"live-preview": false
 					},
 					"uid": 11,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"PlayerHealth": 18
+					},
 					"behaviors": {
 						"8Direction": {
 							"properties": {
@@ -121,6 +123,11 @@
 								"set-angle": "smooth",
 								"default-controls": true,
 								"enabled": true
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
 							}
 						}
 					},
@@ -486,8 +493,8 @@
 						}
 					},
 					"world": {
-						"x": 864,
-						"y": 397,
+						"x": 808,
+						"y": 403,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,

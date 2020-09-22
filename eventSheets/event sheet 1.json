@@ -42,16 +42,6 @@
 			"sid": 730481483023651
 		},
 		{
-			"eventType": "variable",
-			"name": "playerHp",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 831921123039282
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -212,24 +202,22 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-eventvar",
+					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 203406561835708,
+					"sid": 920683685286830,
 					"parameters": {
-						"variable": "timer",
-						"comparison": 0,
-						"value": "10"
+						"interval-seconds": "10"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-eventvar-value",
+					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 663325590129839,
+					"sid": 823642099573553,
 					"parameters": {
 						"variable": "bulletSpeed",
-						"value": "50"
+						"value": "10"
 					}
 				}
 			],
@@ -476,9 +464,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 788728204506981
+							"sid": 335753612745877,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
@@ -987,9 +978,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 210564183563537
+							"sid": 529300324827235,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
@@ -2009,9 +2003,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 928196502602830
+							"sid": 726942328316096,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
@@ -3050,9 +3047,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 735760885210676
+							"sid": 112267855928376,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
@@ -4072,9 +4072,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 203904452956305
+							"sid": 567789962279588,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
@@ -5094,9 +5097,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 823655531780302
+							"sid": 828384303483044,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
@@ -6116,9 +6122,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 359224792430696
+							"sid": 588321951081234,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
@@ -7651,9 +7660,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 616121364146201
+							"sid": 399949991850537,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
@@ -9177,9 +9189,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 622779771195855
+							"sid": 895645656634105,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
@@ -10703,9 +10718,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 335095210015587
+							"sid": 421299159163289,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
@@ -11977,9 +11995,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 886509427410122
+							"sid": 847042134866037,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
 						}
 					],
 					"actions": [
@@ -13713,6 +13734,322 @@
 				}
 			],
 			"sid": 838429677856137
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 549898423746803,
+					"parameters": {
+						"object": "BadVibes"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 298043405453719,
+					"parameters": {
+						"object": "DrugBullet"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 801644490187716,
+					"parameters": {
+						"object": "HealthBullet"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 760783300620273,
+					"parameters": {
+						"object": "RainClouds"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 968892761649571,
+					"parameters": {
+						"object": "StressBullet"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 313874082496649,
+					"parameters": {
+						"object": "Taxes"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 643769099418150,
+					"parameters": {
+						"object": "TraumaBullet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "HappyStudent",
+					"sid": 878118148092724,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 656021528763243,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "HappyStudent",
+					"sid": 535084413056008,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 3,
+						"value": "16"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 491345047913412,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 793403452322668
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "HappyStudent",
+					"sid": 318774428469177,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 3,
+						"value": "14"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 163752091368217,
+					"parameters": {
+						"frame-number": "2"
+					}
+				}
+			],
+			"sid": 897213134959255
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "HappyStudent",
+					"sid": 811056594072755,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 3,
+						"value": "12"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 205304098803888,
+					"parameters": {
+						"frame-number": "3"
+					}
+				}
+			],
+			"sid": 633429744160469
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "HappyStudent",
+					"sid": 698871743129570,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 3,
+						"value": "10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 695872288635586,
+					"parameters": {
+						"frame-number": "4"
+					}
+				}
+			],
+			"sid": 630674454348168
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "HappyStudent",
+					"sid": 188926063701274,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 3,
+						"value": "8"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 289649563550051,
+					"parameters": {
+						"frame-number": "5"
+					}
+				}
+			],
+			"sid": 893761461892560
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "HappyStudent",
+					"sid": 459414612057532,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 3,
+						"value": "6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 257196908284965,
+					"parameters": {
+						"frame-number": "6"
+					}
+				}
+			],
+			"sid": 327192783087777
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "HappyStudent",
+					"sid": 111337980768300,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 3,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 216757457594680,
+					"parameters": {
+						"frame-number": "7"
+					}
+				}
+			],
+			"sid": 770652006489898
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "HappyStudent",
+					"sid": 633783301005311,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 3,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 892638134306101,
+					"parameters": {
+						"frame-number": "8"
+					}
+				}
+			],
+			"sid": 567133418952871
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "HappyStudent",
+					"sid": 874946253812079,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HappyStudent",
+					"sid": 436560479353611,
+					"parameters": {
+						"frame-number": "9"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 907084390052176,
+					"parameters": {
+						"seconds": "3"
+					}
+				}
+			],
+			"sid": 291286354830190
 		}
 	],
 	"sid": 516847117888192
