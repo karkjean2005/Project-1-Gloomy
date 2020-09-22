@@ -1,5 +1,5 @@
 {
-	"name": "Layout 1",
+	"name": "Game Scene",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -572,7 +572,7 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "word",
-						"initially-visible": true,
+						"initially-visible": false,
 						"origin": "top-left"
 					},
 					"uid": 2,
@@ -614,7 +614,7 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "word",
-						"initially-visible": true,
+						"initially-visible": false,
 						"origin": "top-left"
 					},
 					"uid": 3,
@@ -638,12 +638,12 @@
 					}
 				},
 				{
-					"type": "Text3",
+					"type": "InGameTimer",
 					"properties": {
 						"text": "Timer",
 						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 12,
+						"font": "Century Gothic",
+						"size": 16,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -663,8 +663,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 449,
-						"y": 350,
+						"x": 4,
+						"y": 173,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -711,5 +711,5 @@
 	"width": 1280,
 	"height": 960,
 	"unboundedScrolling": false,
-	"eventSheet": "Event sheet 1"
+	"eventSheet": "GameScene"
 }

@@ -128,7 +128,7 @@
 			"HealthBullet",
 			"TraumaBullet",
 			"Text2",
-			"Text3"
+			"InGameTimer"
 		],
 		"subfolders": []
 	},
@@ -140,13 +140,17 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Game Scene",
+			"Title Screen",
+			"Game Over Screen"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"GameScene",
+			"TitleScreen",
+			"GameOverScreen"
 		],
 		"subfolders": []
 	},

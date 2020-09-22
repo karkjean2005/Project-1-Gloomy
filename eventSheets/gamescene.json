@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet 1",
+	"name": "GameScene",
 	"events": [
 		{
 			"eventType": "variable",
@@ -197,6 +197,27 @@
 				}
 			],
 			"sid": 899385361624622
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 655888748783521
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "InGameTimer",
+					"sid": 981874091570183,
+					"parameters": {
+						"text": "timer"
+					}
+				}
+			],
+			"sid": 624230227034477
 		},
 		{
 			"eventType": "block",
@@ -14046,6 +14067,14 @@
 					"sid": 907084390052176,
 					"parameters": {
 						"seconds": "3"
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 125974250395152,
+					"parameters": {
+						"layout": "\"Game Over Screen\""
 					}
 				}
 			],
