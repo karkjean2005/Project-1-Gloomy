@@ -1,5 +1,32 @@
 {
 	"name": "GameOverScreen",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Restart",
+					"sid": 399098319538681
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 243135128929453,
+					"parameters": {
+						"layout": "\"Title Screen\""
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 926114013946254
+				}
+			],
+			"sid": 247589527803935
+		}
+	],
 	"sid": 803923154815279
 }

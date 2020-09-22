@@ -1,5 +1,37 @@
 {
 	"name": "TitleScreen",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "StartGame",
+					"sid": 290772768126940
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 931030079397505,
+					"parameters": {
+						"layout": "\"Game Scene\""
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 142908797416171
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 537949315718276
+				}
+			],
+			"sid": 322169276929421
+		}
+	],
 	"sid": 582550336936850
 }

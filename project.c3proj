@@ -71,6 +71,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -128,7 +136,15 @@
 			"HealthBullet",
 			"TraumaBullet",
 			"Text2",
-			"InGameTimer"
+			"InGameTimer",
+			"TiledBackground2",
+			"Text3",
+			"Restart",
+			"TiledBackground3",
+			"Title",
+			"Rules",
+			"Controls",
+			"StartGame"
 		],
 		"subfolders": []
 	},
