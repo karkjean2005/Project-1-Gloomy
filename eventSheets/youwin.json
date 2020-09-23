@@ -1,0 +1,37 @@
+{
+	"name": "YouWin",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "GoBack",
+					"sid": 816395155341555
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 634142879308856,
+					"parameters": {
+						"layout": "\"Title Screen\""
+					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 287177520144019
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 739428759330530
+				}
+			],
+			"sid": 966057680929511
+		}
+	],
+	"sid": 985314432579523
+}

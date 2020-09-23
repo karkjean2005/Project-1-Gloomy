@@ -153,7 +153,10 @@
 			"Rules",
 			"Controls",
 			"StartGame",
-			"BoundToScreen1"
+			"BoundToScreen1",
+			"YouWin",
+			"Congrats",
+			"GoBack"
 		],
 		"subfolders": []
 	},
@@ -167,7 +170,8 @@
 		"items": [
 			"Game Scene",
 			"Title Screen",
-			"Game Over Screen"
+			"Game Over Screen",
+			"You Win"
 		],
 		"subfolders": []
 	},
@@ -175,7 +179,8 @@
 		"items": [
 			"GameScene",
 			"TitleScreen",
-			"GameOverScreen"
+			"GameOverScreen",
+			"YouWin"
 		],
 		"subfolders": []
 	},

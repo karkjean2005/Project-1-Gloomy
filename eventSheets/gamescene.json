@@ -189,7 +189,7 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 396151813611631,
+					"sid": 527028087665781,
 					"parameters": {
 						"variable": "timer",
 						"value": "1"
@@ -14370,6 +14370,47 @@
 				}
 			],
 			"sid": 735773227589345
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "HappyStudent",
+					"sid": 819472840903823,
+					"parameters": {
+						"instance-variable": "PlayerHealth",
+						"comparison": 5,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 973153825683340,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 5,
+						"value": "600"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 347926847469266,
+					"parameters": {
+						"layout": "\"You Win\""
+					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 384612523613943
+				}
+			],
+			"sid": 696661589094355
 		}
 	],
 	"sid": 516847117888192

@@ -1,9 +1,20 @@
 {
 	"name": "YouWin",
-	"plugin-id": "Text",
-	"sid": 938294922696762,
+	"plugin-id": "TiledBg",
+	"sid": 756375710903344,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": []
+	"effectTypes": [],
+	"image": {
+		"width": 250,
+		"height": 250,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 3134111,
+		"useCollisionPoly": true
+	}
 }
