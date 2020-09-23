@@ -265,6 +265,21 @@
 					"name": "8 bit death sound.wav",
 					"type": "audio/wav",
 					"sid": 334979755214397
+				},
+				{
+					"name": "BulletDestroyed.webm",
+					"type": "video/webm",
+					"sid": 692671449478531
+				},
+				{
+					"name": "BulletSpawn.webm",
+					"type": "video/webm",
+					"sid": 182073688206256
+				},
+				{
+					"name": "Death.webm",
+					"type": "video/webm",
+					"sid": 370171046954623
 				}
 			],
 			"subfolders": []

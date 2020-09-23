@@ -260,13 +260,18 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 819906463523512,
+					"sid": 699672806074981,
 					"parameters": {
-						"audio-file": "Hit_02",
+						"audio-file": "BulletDestroyed",
 						"loop": "not-looping",
 						"volume": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "RainClouds",
+					"sid": 431823973997968
 				},
 				{
 					"id": "spawn-another-object",
@@ -277,11 +282,6 @@
 						"layer": "0",
 						"image-point": "0"
 					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "RainClouds",
-					"sid": 989369976071847
 				}
 			],
 			"sid": 107035878456267
@@ -302,13 +302,18 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 558600021496393,
+					"sid": 296573288717925,
 					"parameters": {
-						"audio-file": "Hit_02",
+						"audio-file": "BulletDestroyed",
 						"loop": "not-looping",
 						"volume": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Taxes",
+					"sid": 431525819441465
 				},
 				{
 					"id": "spawn-another-object",
@@ -319,11 +324,6 @@
 						"layer": "0",
 						"image-point": "0"
 					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "Taxes",
-					"sid": 355088801228472
 				}
 			],
 			"sid": 777681720930519
@@ -14184,9 +14184,9 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 807234593001041,
+					"sid": 677008033810325,
 					"parameters": {
-						"audio-file": "Hero_Death_00",
+						"audio-file": "Death",
 						"loop": "not-looping",
 						"volume": "0",
 						"tag-optional": "\"\""
@@ -14369,8 +14369,7 @@
 					}
 				}
 			],
-			"sid": 735773227589345,
-			"disabled": true
+			"sid": 735773227589345
 		},
 		{
 			"eventType": "block",
