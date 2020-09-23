@@ -35,7 +35,7 @@
 			"eventType": "variable",
 			"name": "bulletSpeed",
 			"type": "number",
-			"initialValue": "40",
+			"initialValue": "75",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -145,9 +145,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 691701026487982,
+					"sid": 315186625470047,
 					"parameters": {
-						"interval-seconds": "3"
+						"interval-seconds": "0.5"
 					}
 				}
 			],
