@@ -1,0 +1,32 @@
+{
+	"name": "YouWinScreen",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "TitleScreen",
+					"sid": 131742918949212
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 825983816713735,
+					"parameters": {
+						"layout": "\"Title Screen\""
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 263439255173894
+				}
+			],
+			"sid": 277879953216777
+		}
+	],
+	"sid": 727847329886163
+}
