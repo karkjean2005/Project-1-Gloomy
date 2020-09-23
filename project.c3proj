@@ -109,14 +109,6 @@
 			"author": "Scirra",
 			"version": "r210.2",
 			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
-			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
 		}
 	],
 	"uniqueId": "zlhfpuvi5s8",
@@ -152,13 +144,7 @@
 			"Title",
 			"Rules",
 			"Controls",
-			"StartGame",
-			"Barrier",
-			"OutOfBounds",
-			"OutOfBounds2",
-			"YouWinBackground",
-			"YouWin",
-			"TitleScreen"
+			"StartGame"
 		],
 		"subfolders": []
 	},
@@ -172,8 +158,7 @@
 		"items": [
 			"Game Scene",
 			"Title Screen",
-			"Game Over Screen",
-			"You Win Screen"
+			"Game Over Screen"
 		],
 		"subfolders": []
 	},
@@ -181,8 +166,7 @@
 		"items": [
 			"GameScene",
 			"TitleScreen",
-			"GameOverScreen",
-			"YouWinScreen"
+			"GameOverScreen"
 		],
 		"subfolders": []
 	},
