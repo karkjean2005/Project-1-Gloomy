@@ -41,9 +41,9 @@
 				{
 					"type": "Title",
 					"properties": {
-						"text": "How to Avoid Being Depressed",
+						"text": "2020 Gloom",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "Century Gothic",
 						"size": 50,
 						"line-height": 0,
 						"bold": false,
@@ -85,7 +85,7 @@
 					"properties": {
 						"text": "Rules:\n\n2020 is shooting negavtive emotions towards you. Dodge the bullets before you succumb to extreme sadness",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "Century Gothic",
 						"size": 12,
 						"line-height": 0,
 						"bold": false,
@@ -127,7 +127,7 @@
 					"properties": {
 						"text": "Controls:\n\nUse your arrows keys to move up, down, right, and left to avoid the bullets coming in your direction.",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "Century Gothic",
 						"size": 12,
 						"line-height": 0,
 						"bold": false,
