@@ -13820,7 +13820,7 @@
 				{
 					"id": "subtract-from-instvar",
 					"objectClass": "HappyStudent",
-					"sid": 878118148092724,
+					"sid": 236724069347769,
 					"parameters": {
 						"instance-variable": "PlayerHealth",
 						"value": "1"
@@ -14070,6 +14070,17 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 807234593001041,
+					"parameters": {
+						"audio-file": "Hero_Death_00",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "go-to-layout-by-name",
 					"objectClass": "System",
 					"sid": 125974250395152,
@@ -14079,6 +14090,339 @@
 				}
 			],
 			"sid": 291286354830190
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 890983644179132,
+					"parameters": {
+						"object": "BadVibes"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 833713088330633,
+					"parameters": {
+						"audio-file": "Hit_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 939412437174343
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 551669682921467,
+					"parameters": {
+						"object": "DrugBullet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 819995773362498,
+					"parameters": {
+						"audio-file": "Hit_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 456324314715293
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 109692752536323,
+					"parameters": {
+						"object": "HealthBullet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 887202627460589,
+					"parameters": {
+						"audio-file": "Hit_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 485644605992274
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 303341242324293,
+					"parameters": {
+						"object": "RainClouds"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 946531706787749,
+					"parameters": {
+						"audio-file": "Hit_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 541895387549388
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 141782800258943,
+					"parameters": {
+						"object": "StressBullet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 151693987367044,
+					"parameters": {
+						"audio-file": "Hit_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 343253166171470
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 929085589871419,
+					"parameters": {
+						"object": "Taxes"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 570556911172966,
+					"parameters": {
+						"audio-file": "Hit_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 435980061831427
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HappyStudent",
+					"sid": 492499120934522,
+					"parameters": {
+						"object": "TraumaBullet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 700777020533483,
+					"parameters": {
+						"audio-file": "Hit_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 514877747999844
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "BadVibes",
+					"sid": 111696373144554
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 379613124576613,
+					"parameters": {
+						"audio-file": "Shoot_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 289491019603738
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "DrugBullet",
+					"sid": 602657271200759
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 952345854396636,
+					"parameters": {
+						"audio-file": "Shoot_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 735757309447008
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "HealthBullet",
+					"sid": 313580097319376
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 292449692229434,
+					"parameters": {
+						"audio-file": "Shoot_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 754766308377806
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "StressBullet",
+					"sid": 872271381794881
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 485296779790655,
+					"parameters": {
+						"audio-file": "Shoot_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 640125386087486
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Taxes",
+					"sid": 803845595097563
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 824900160250694,
+					"parameters": {
+						"audio-file": "Shoot_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 569950283780356
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "TraumaBullet",
+					"sid": 566928259015034
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 129670846307367,
+					"parameters": {
+						"audio-file": "Shoot_02",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 222219935491536
 		}
 	],
 	"sid": 516847117888192
